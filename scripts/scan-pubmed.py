@@ -260,13 +260,7 @@ def process(xml_gz_file):
     for index, xml_node in enumerate(root.xpath('/PubmedArticleSet/PubmedArticle')):
         article = PubmedArticle(xml_node)
         if article_match(article, [
-            'single-cell sequencing',
-            'single-cell RNA sequencing',
-            'single-cell transcriptomics',
-            'single-cell RNA-seq',
-            'single-cell transcriptome',
-            'scRNA-seq',
-            'spatial transcriptomics'
+            'synthetic biology'
             ]):
             cnt += 1
             print(f"Processing ({cnt}): (PMID: {article.pmid}) {article.title}")
